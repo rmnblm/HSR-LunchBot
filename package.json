@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/rmnblm/hsr-lunchbot#readme",
   "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0",
     "telegram-node-bot": "^3.0.12"
   }
 }
