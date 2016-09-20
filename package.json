@@ -2,6 +2,9 @@
   "name": "hsr-lunchbot",
   "version": "1.0.0",
   "description": "A Telegram bot to retrieve today's lunch menu at the University of Applied Sciences Rapperswil",
+  "engines": {
+    "node": "6.6.0"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
