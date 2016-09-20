@@ -4,6 +4,33 @@ A Telegram bot to retrieve today's lunch menu at the University of Applied Scien
 # Getting Started
 Add the bot telegram.me/HSRLunchBot to a group and call `/get@HSRLunchBot`.
 
+# Develop
+1. To host a similar bot like this, clone this repo:
+
+```
+$ git clone https://github.com/rmnblm/hsr-lunchbot
+```
+
+2. Make all required changes to `index.js` and run the app
+
+```
+$ node index.js
+```
+
+3. Once you’re satisfied with the behavior, commit all your files and deploy the app to Heroku
+
+```
+$ heroku create
+Creating app... done, ⬢ radiant-refuge-28891
+$ git push heroku master
+```
+
+4. Run the following command to avoid the error log message `Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch`:
+
+```
+$ heroku scale web=0 worker=1
+```
+
 # License
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
         Version 2, December 2004
