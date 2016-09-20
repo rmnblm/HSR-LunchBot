@@ -4,7 +4,7 @@
   "description": "A Telegram bot to retrieve today's lunch menu at the University of Applied Sciences Rapperswil",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rmnblm/hsr-lunchbot/issues"
   },
-  "homepage": "https://github.com/rmnblm/hsr-lunchbot#readme"
+  "homepage": "https://github.com/rmnblm/hsr-lunchbot#readme",
+  "dependencies": {
+    "telegram-node-bot": "^3.0.12"
+  }
 }
