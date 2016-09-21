@@ -6,25 +6,21 @@ Add the bot https://telegram.me/HSRLunchBot to a group and call `/get@HSRLunchBo
 
 # Develop
 1. To host a similar bot like this, clone this repo:
-
 ```
 $ git clone https://github.com/rmnblm/hsr-lunchbot
 ```
 
 2. Install all packages with
-
 ```
 $ npm install
 ```
 
 3. Make all required changes (especially changing the API key!) to `index.js` and run the app
-
 ```
 $ node index.js
 ```
 
 4. Once you’re satisfied with the behavior, commit all your files and deploy the app to Heroku
-
 ```
 $ heroku create
 Creating app... done, ⬢ radiant-refuge-28891
@@ -32,7 +28,6 @@ $ git push heroku master
 ```
 
 5. Run the following command to avoid the error log message `Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch`:
-
 ```
 $ heroku scale web=0 worker=1
 ```
