@@ -28,7 +28,8 @@ class MenuController extends TelegramBaseController {
         response += '*MENSA*\n'
         response += text1
         self.parse('forschungszentrum.html', function(text2) {
-          response += '*FORSCHUNGSZENTRUM*\n'
+          text2 = text2.replace(/ Bowl/g, " Schnabelteller");
+		  response += '*FORSCHUNGSZENTRUM*\n'
           response += text2
           $.sendMessage(response, { parse_mode: 'Markdown'})
         })
