@@ -1,7 +1,12 @@
-# hsr-lunchbot
+# HSR-LunchBot
 A Telegram bot to retrieve today's lunch menu at the University of Applied Sciences Rapperswil.
 
+![screenshot](./screenshot.png)
+
+
+
 # Getting Started
+
 Add the bot https://telegram.me/HSRLunchBot to a group and call `/get@HSRLunchBot`.
 
 # Develop
