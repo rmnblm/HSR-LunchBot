@@ -2,7 +2,8 @@
 
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
-const tg = new Telegram.Telegram('176766794:AAHzS9L9ZrSmvfTGSVWVy9ymaJjE82_LDrg')
+const bot_api_token = process.env.BOT_API_TOKEN;
+const tg = new Telegram.Telegram(bot_api_token)
 const request = require('request')
 const cheerio = require('cheerio')
 
@@ -11,11 +12,14 @@ class MenuController extends TelegramBaseController {
       const baseURL = 'http://hochschule-rapperswil.sv-restaurant.ch/de/menuplan/'
       request(baseURL + url, function(err, resp, body){
         let $ = cheerio.load(body)
-        let offers = $('.offer')
+        let offers = $('#menu-plan-tab1').find('.menu-item')
         var text = ''
         $(offers).each(function(i, offer) {
-          text += '_' + $(offer).find('.offer-description').text().trim() + '_\n'
-          text += $(offer).find('.menu-description .title').text() + ' - ' + $(offer).find('.menu-description .trimmings').text() + '\n\n'
+          let menuDescription = $(offer).find('.menu-description');
+          menuDescription.find('br').replaceWith('\n');
+
+          text += '_' + $(offer).find('.menu-title').text().trim() + '_\n'
+          text += menuDescription.text() + '\n\n'
         })
         callback(text)
       });
